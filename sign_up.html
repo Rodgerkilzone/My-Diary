@@ -38,7 +38,24 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
-
+  input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 input[type=submit] {
     width: 100%;
     background-color: #4CAF50;
@@ -117,11 +134,11 @@ color:red;
     <!-- <label>Last Name</label> -->
     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
     <!-- <label >Email</label> -->
-    <input type="text" id="email" name="lastname" placeholder="Your email address..">
+    <input type="email" id="email" name="lastname" placeholder="Your email address..">
  <!-- <label>Password</label> -->
-    <input type="text" id="password" name="password" placeholder="Your password">
+    <input type="password" id="password" name="password" placeholder="Your password">
     <!-- <label>Confirm Password</label> -->
-    <input type="text" id="password" name="password" placeholder="Confirm Your password">
+    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Your password">
   
     <input type="submit" value="Sign up">
     <!-- <p class="alert">Wrong password confirmation</p> -->
