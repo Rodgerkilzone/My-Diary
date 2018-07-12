@@ -70,6 +70,16 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
+input[type=date], select {
+
+    min-width:100%;
+    padding: 12px 20px;
+    /*margin: 8px 0;*/
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 button {
   min-width: 100px;
    border-radius: 4px;
@@ -84,6 +94,7 @@ button {
 .search {
   border-color: #4CAF50;
   color: green;
+   background-color: #e5e5e5;
 }
 .search:hover {
     background-color: #4CAF50;
@@ -94,6 +105,15 @@ button {
   color: white;
   border-color: #2196F3;
 
+}
+.add {
+  border-color: #2196F3;
+  color: #2196F3;
+  background-color: #e5e5e5;
+}
+.add:hover {
+    background-color: #2196F3;
+    color: white;
 }
 
  .hide {
@@ -229,17 +249,20 @@ input[type=submit] {
   </div>
    <br/>
   <div class="flex">
-        <div style="flex:3"><input type="text"  placeholder="Search.."> </div>
+        <div style="flex:3"><input type="text"  placeholder="Search.."><small>-Search by date or entry title</small> </div>
            <div style="flex:1"><button class="search">Search</button></div>
            <div style="flex:1"><button class="info" onclick="hideNew()">+ New</button></div>
     </div>
     <br/>
     <div class="event" id="event">
-    <strong>Today</strong> 
+    <strong>New Entry</strong> 
    <div class="flex">
-         <div style="flex:3"><input type="text"  name="Title" placeholder="Today's Title"> </div>
-           <div style="flex:1"><button class="info">Add</button></div>
-           <div style="flex:1"><button class="hide" onclick="hideNew()">Hide</button></div>
+         <div style="flex:3"><input type="text"  name="Title" placeholder="New Title"> </div>
+           
+           <div style="flex:1">
+            <input type="date"  name="date" id="theDate">
+          </div>
+          <div style="flex:1"><button class="add">Add</button></div>
               <br>
 
      </div>  
@@ -301,6 +324,17 @@ function hideNew() {
         x.style.display = "block";
     }
 }
+var date = new Date();
+
+var day = date.getDate();
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
+
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+
+var today = year + "-" + month + "-" + day;       
+document.getElementById("theDate").value = today;
 </script>  
   </body>
 </html>
