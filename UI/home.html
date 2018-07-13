@@ -12,20 +12,20 @@
   <body id="container">
    
     <div class="navbar">
-      <!-- <h2>My Diary</h2> -->
+    
       <span class="title">My Diary</span>
   <a href="index.html">Logout</a>
-  <a href="#">Settings</a>
+  <a href="profile.html">Profile</a>
 
 </div>
 <div class="container">
   <div class="header">
    <span class="greet">Hello ,Rodger</span> 
-   <a href="" class="badge1" data-badge="1">Reminder</a>
+   <a href="" class="badge1">Reminder : ON</a>
   </div>
    <br/>
   <div class="flex">
-        <div style="flex:3"><input type="text"  placeholder="Search.."><small>-Search by date or entry title</small> </div>
+        <div style="flex:3"><input type="text"  placeholder="Search Entry.."><small class="tip">-Search by date or entry title</small> </div>
            <div style="flex:1"><button class="search">Search</button></div>
            <div style="flex:1"><button class="info" onclick="hideNew()">+ New</button></div>
     </div>
@@ -45,30 +45,30 @@
 
     <textarea type="text"  name="Title" placeholder="Write Diary.."></textarea></div>
     <br>
-      <strong>Diary Entries</strong>  <small> (Click to View)</small>
-<button class="collapsible">Going out with friends<br><small>-Date: 9/7/2018</small> </button>
+      <strong>Diary Entries</strong>  <small class="tip"> (Click to View)</small>
+<button class="collapsible">Going out with friends<br><small class="date">-Date: 9/7/2018</small> </button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 <div><button class="info">Edit</button><button class="delete">Delete</button></div>
 
 </div>
-<button class="collapsible">Swimming at the beach <br><small>-Date: 8/7/2018</small> </button>
+<button class="collapsible">Swimming at the beach <br><small class="date">-Date: 8/7/2018</small> </button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   <div><button class="info">Edit</button><button class="delete">Delete</button></div>
 </div>
-<button class="collapsible">Camping with classmates<br><small>-Date: 7/7/2018</small> </button>
+<button class="collapsible">Camping with classmates<br><small class="date">-Date: 7/7/2018</small> </button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   <div><button class="info">Edit</button><button class="delete">Delete</button></div>
 </div>
-<button class="collapsible">At the airport<br><small>-Date: 6/7/2018</small> </button>
+<button class="collapsible">At the airport<br><small class="date">-Date: 6/7/2018</small> </button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-<div><button class="info">Edit</button><button class="delete">Delete</button></div>
+<div><button class="info">Edit</button><button class="delete" class="date">Delete</button></div>
 
 </div>
-<button class="collapsible">Eating competition<br><small>-Date: 5/7/2018</small> </button>
+<button class="collapsible">Eating competition<br><small class="date">-Date: 5/7/2018</small> </button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   <div><button class="info">Edit</button><button class="delete">Delete</button></div>
