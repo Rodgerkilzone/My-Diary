@@ -13,10 +13,10 @@
    
     <div class="navbar">
     
-      <span class="title">My Diary</span>
-  <a href="index.html">Logout</a>
+    <span class="title"> <a href="index.html">My Diary</a></span>
+  <a href="login.html">Logout</a>
   <a href="profile.html">Profile</a>
-
+<a href="home.html" class="selected">Home</a>
 </div>
 <div class="container">
   <div class="header">
@@ -46,7 +46,8 @@
     <textarea type="text"  name="Title" placeholder="Write Diary.."></textarea></div>
     <br>
       <strong>Diary Entries</strong>  <small class="tip"> (Click to View)</small>
-<button class="collapsible">Going out with friends<br><small class="date">-Date: 9/7/2018</small> </button>
+<button class="collapsible">Going out with friends<br><small class="date">-Date: 9/7/2018</small>
+ </button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 <div><button class="info">Edit</button><button class="delete">Delete</button></div>
@@ -82,16 +83,27 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
-    });
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
 }
+// for (i = 0; i < coll.length; i++) {
+//     coll[i].addEventListener("click", function() {
+//         this.classList.toggle("active");
+//         var content = this.nextElementSibling;
+//         if (content.style.display === "block") {
+//             content.style.display = "none";
+//         } else {
+//             content.style.display = "block";
+//         }
+//     });
+// }
 function hideNew() {
     var x = document.getElementById("event");
     if (x.style.display === "block") {

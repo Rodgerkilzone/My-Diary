@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <title>My Diary</title>
+  </head>
+  <body id="container">
+     <div class="navbar">
+       
+     <span class="title"> <a href="index.html">My Diary</a></span>
+  <!-- <a href="index.html">Logout</a> -->
+  <a href="sign_up.html">Register</a>
+  <a href="login.html" class="selected">Login</a>
+</div>
+   <div class="card">
+    <!-- <h1>My Diary</h1> -->
+
+     <!-- <h3>Login</h3> -->
+     <div class="logo">
+      <div class="description">
+        <div class="img"><img src="images/logo.png"></div>
+        
+       <h3>My Diary</h3>
+       <p>MyDiary is an online journal where users can pen down their thoughts and feelings. </p>
+     </div>
+<div class="footer">@ Andela 2018</div>
+   </div>
+<div class="signup">
+  <h3>Login</h3>
+  <form >
+
+    <input type="email" id="email" name="lastname" placeholder="Email address">
+ <!-- <label>Password</label> -->
+    <input type="password" id="password" name="password" placeholder="Password">
+
+  
+  <input type="submit" onclick="homePage()" value="Login">
+    <!-- <p class="alert">Wrong password conformation</p> -->
+    <div class="forgot"><a href="#">Forgot password?</a></div>
+    <div class="link"><a href="sign_up.html">Sign Up</a></div>
+       
+  </form> 
+
+</div>
+
+   </div>
+   <script>
+function homePage() {
+    window.open("home.html");
+}
+</script>
+  </body>
+</html>
