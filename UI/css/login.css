@@ -7,7 +7,7 @@
 
 
     }
-         .navbar {
+     .navbar {
       /*height: 60px;*/
     overflow: hidden;
     background-color:#E91E63;
@@ -38,6 +38,7 @@
     color: white;
 }
 .title{
+ 
   color:white;
   font-weight: bold;
   text-align: center;
@@ -51,18 +52,18 @@ padding: 0px;padding-left:10px;
 }
 .title a:hover{
   background-color: #E91E63;
-/*padding: 0px;padding-left:10px*/
 }
 .selected {
     background:#FF4081;
     color: white;
 }
-     @media(min-width: 600px){
+      @media(min-width: 600px){
         .card{
         width: 50%;
         min-width: 350px;
         background-color: white;
         min-height:320px;
+
         box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 5px 0 rgba(0,0,0,.23);
         margin:50px auto 0 auto;
         display: flex;
@@ -74,11 +75,15 @@ padding: 0px;padding-left:10px;
         min-width: 350px;
         background-color: white;
         min-height:320px;
+
         box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 5px 0 rgba(0,0,0,.23);
+        /*border-radius:5px;*/
         margin:50px auto 0 auto;
+        /*padding:5px;*/
+        /*display: wrap;*/
 
       }
-      input[type=text], select {
+      input[type=email], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -87,7 +92,7 @@ padding: 0px;padding-left:10px;
     border-radius: 4px;
     box-sizing: border-box;
 }
-  input[type=email], select {
+input[type=password], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -96,16 +101,8 @@ padding: 0px;padding-left:10px;
     border-radius: 4px;
     box-sizing: border-box;
 }
-  input[type=password], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-input[type=submit] {
+
+input[type=button] {
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -124,16 +121,17 @@ input[type=submit]:hover {
     border-radius: 5px;
     padding: 20px;
     flex:4;
-    margin:10px;
+    background-color: white;
+    min-height: 250px;
+    /*margin-bottom:30px;*/
 }
 .logo{
 flex:3;
-  /*width: 40%;*/
   background-color:#AD1457;
    position: relative;
 }
 .description{
-  margin: 100px auto 0 auto;
+  margin: 30px auto 0 auto;
   text-align: center;
   color: white;
   padding: 10px;
@@ -143,6 +141,12 @@ p{
 }
 .link{
   float:right;
+  margin: 10px;
+}
+.forgot{
+  float:left;
+  margin: 10px;
+   margin-left: 0px;
 }
 .img{
   width: 100px;

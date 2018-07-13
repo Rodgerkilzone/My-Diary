@@ -1,5 +1,4 @@
     body{
-      /*background-color: #e5e5e5;*/
       background-image: url(../images/background9.jpg);
       background-size: 100% 100vh;
       background-repeat: no-repeat;
@@ -8,21 +7,13 @@
       margin:0px;
     }
     .navbar {
-      /*height: 60px;*/
     overflow: hidden;
     background-color:#E91E63;
-    /*position: fixed; */
-    /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    top: 0; 
+    width: 100%;
 
 }
-
-/* Links inside the navbar */
 .navbar a {
-  /*height: 60px;*/
-  /*line-height: 60px;*/
-    /*float: left;*/
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -31,30 +22,36 @@
     font-weight: bold;
     float: right;
 }
-
-/* Change background on mouse-over */
 .navbar a:hover {
     background:#FF4081;
     color: white;
 }
+.title a{
+   float: left;
+padding: 0px;padding-left:10px;
+}
+.title a:hover{
+  background-color: #E91E63;
+}
+.selected {
+    background:#FF4081;
+    color: white;
+}
+
+
       .container{
+
          width: 50%;
-        min-width: 500px;
-        /*background-color: white;*/
+        min-width: 320px;
         min-height:400px;
-        /*box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 5px 0 rgba(0,0,0,.23);*/
-        /*border-radius:5px;*/
         margin:30px auto 0 auto;
         padding:5px;
-        /*display: flex;*/
-        /*text-align:center;*/
       }
 
        input[type=text], select {
 
     min-width:100%;
     padding: 12px 20px;
-    /*margin: 8px 0;*/
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -64,7 +61,6 @@ input[type=date], select {
 
     min-width:100%;
     padding: 12px 20px;
-    /*margin: 8px 0;*/
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -124,21 +120,20 @@ button {
 .new{
   display: flex;
 }
-.flex{
-  display: flex;
+@media(min-width: 600px) {
+ .flex{
+   display: flex;
   width: 100%;
+} 
 }
+
 textarea{
   width: 100%;
-  /*margin: 5px;*/
   min-height: 100px;
   margin: 0 auto 0 auto;
-/*  margin-left: 20px;
-  margin-right: 20px;*/
 }
 strong{
   float:left;
-  /*color: white;*/
 
 }
 .greet{
@@ -153,21 +148,6 @@ strong{
    text-decoration-line: none;
    font-weight: bold;
 }
-/*.badge1[data-badge]:after {
-   content:attr(data-badge);
-   position:absolute;
-   top:-10px;
-   right:-10px;
-   font-size:.7em;
-   background:red;
-   color:white;
-   width:18px;height:18px;
-   text-align:center;
-   line-height:18px;
-   border-radius:50%;
-   box-shadow:0 0 1px #333;
-   
-}*/
 .collapsible {
     background-color:white;
     color: black;
@@ -185,25 +165,33 @@ strong{
 .active, .collapsible:hover {
     background-color: #F8BBD0;
 }
+.collapsible:after {
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
 
+.active:after {
+    content: "\2212";
+}
 .content {
+
     padding: 0 18px;
-    display: none;
+    max-height: 0;
     overflow: hidden;
-    background-color: white;
-    float: left;
-    text-align: left;
+    transition: max-height 0.2s ease-out;
+    background-color:white;
 }
 .tip{
-  color: red;
+  color: gray;
   font-size: 12px;
-  /*margin-top:20px;*/
   line-height: 20px;
 }
 .date{
   color: gray;
   font-size: 12px;
-  /*margin-top:20px;*/
   line-height: 20px;
 }
 .delete {
