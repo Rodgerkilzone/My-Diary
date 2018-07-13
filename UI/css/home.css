@@ -52,8 +52,9 @@ padding: 0px;padding-left:10px;
 
 
       .container{
+
          width: 50%;
-        min-width: 500px;
+        min-width: 320px;
         /*background-color: white;*/
         min-height:400px;
         /*box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 5px 0 rgba(0,0,0,.23);*/
@@ -138,10 +139,13 @@ button {
 .new{
   display: flex;
 }
-.flex{
-  display: flex;
+@media(min-width: 600px) {
+ .flex{
+   display: flex;
   width: 100%;
+} 
 }
+
 textarea{
   width: 100%;
   /*margin: 5px;*/
