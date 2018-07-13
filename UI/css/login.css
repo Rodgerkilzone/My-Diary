@@ -58,7 +58,8 @@ padding: 0px;padding-left:10px;
     background:#FF4081;
     color: white;
 }
-      .card{
+      @media(min-width: 600px){
+        .card{
         width: 50%;
         min-width: 500px;
         background-color: white;
@@ -69,6 +70,20 @@ padding: 0px;padding-left:10px;
         margin:50px auto 0 auto;
         /*padding:5px;*/
         display: flex;
+
+      }
+      }
+      .card{
+        width: 50%;
+        min-width: 360px;
+        background-color: white;
+        min-height:320px;
+
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 5px 0 rgba(0,0,0,.23);
+        /*border-radius:5px;*/
+        margin:50px auto 0 auto;
+        /*padding:5px;*/
+        /*display: wrap;*/
 
       }
       input[type=email], select {
@@ -109,6 +124,9 @@ input[type=submit]:hover {
     border-radius: 5px;
     padding: 20px;
     flex:4;
+    background-color: white;
+    min-height: 250px;
+    /*margin-bottom:30px;*/
 }
 .logo{
 flex:3;
@@ -127,11 +145,11 @@ p{
 }
 .link{
   float:right;
-  margin: 20px;
+  margin: 10px;
 }
 .forgot{
   float:left;
-  margin: 20px;
+  margin: 10px;
    margin-left: 0px;
 }
 .img{
