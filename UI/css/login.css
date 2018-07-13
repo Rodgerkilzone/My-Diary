@@ -52,7 +52,6 @@ padding: 0px;padding-left:10px;
 }
 .title a:hover{
   background-color: #E91E63;
-/*padding: 0px;padding-left:10px*/
 }
 .selected {
     background:#FF4081;
@@ -61,21 +60,19 @@ padding: 0px;padding-left:10px;
       @media(min-width: 600px){
         .card{
         width: 50%;
-        min-width: 500px;
+        min-width: 350px;
         background-color: white;
         min-height:320px;
 
         box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 5px 0 rgba(0,0,0,.23);
-        /*border-radius:5px;*/
         margin:50px auto 0 auto;
-        /*padding:5px;*/
         display: flex;
 
       }
       }
       .card{
         width: 50%;
-        min-width: 360px;
+        min-width: 350px;
         background-color: white;
         min-height:320px;
 
@@ -130,7 +127,6 @@ input[type=submit]:hover {
 }
 .logo{
 flex:3;
-  /*width: 40%;*/
   background-color:#AD1457;
    position: relative;
 }
@@ -160,7 +156,6 @@ p{
 .footer{
    position: absolute;
   bottom:0px;
-   /*position: relative;*/
   color: white;
   font-weight: bold;
   font-size:12px;
