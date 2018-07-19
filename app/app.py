@@ -28,11 +28,12 @@ def make_uri(entry):
             new_entry[field] = entry[field]
     return new_entry
 
+# GET ALL ENTRIES
 @app.route('/mydiary/api/v1/entries', methods=['GET'])
 def get_entries():
     return jsonify({'entries': [make_uri(entry) for entry in entries]})
 
-
+#GET SPECIFIC ENTRIES
 @app.route('/mydiary/api/v1/entries/<int:entry_id>', methods=['GET'])
 def get_entry(entry_id):
     entry = [entry for entry in entries if entry['id'] == entry_id]
@@ -40,6 +41,16 @@ def get_entry(entry_id):
         abort(404)
     return jsonify({'entry': entry[0]})
 
+#UPDATE ENTRIES
+@app.route('/mydiary/api/v1/entries/<int:entry_id>', methods=['PUT'])
+def update_entry(entry_id):
+    entry = [entry for entry in entries if entry['id'] == entry_id]
+    if len(entry) == 0 or not request.json:
+        abort(400)
+    entry[0]['title'] = request.json.get('title', entry[0]['title'])
+    entry[0]['content'] = request.json.get('content', entry[0]['content'])
+    entry[0]['date'] = request.json.get('date', entry[0]['date'])
+    return jsonify({'entry': entry})
 
 
 
