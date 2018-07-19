@@ -11,6 +11,7 @@ class TestApp(unittest.TestCase):
                             'content':'i love travelling and adventure',
                             "date":'5-8-2018'
             }
+         self.entry_update= {'title':'school','content':'today school was amaizing'}
          Entry().save(self.entry)
 # TEST FOR GETTING ALL ENTRIES
      def test_get_all_entries(self):
@@ -29,8 +30,14 @@ class TestApp(unittest.TestCase):
         response = self.tester.post(self.api_route,data=json.dumps(self.payload),
         content_type="application/json")
         self.assertEquals(response.status_code,201)
-        response_message = json.loads(response.data.decode('utf8'))
-        self.assertEqual("today i had fun at the beach",response_message['content'])
+        response_data = json.loads(response.data.decode('utf8'))
+        self.assertEqual("today i had fun at the beach",response_data['content'])
+# TEST FOR UPDATING ENTRY
+     def test_entry_update(self):
+        response = self.tester.put(self.api_route_2,data=json.dumps(self.entry_update),
+        content_type="application/json")
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("school", str(response.data))
 
 
 
