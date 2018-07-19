@@ -38,8 +38,10 @@ class TestApp(unittest.TestCase):
         content_type="application/json")
         self.assertEqual(response.status_code, 200)
         self.assertIn("school", str(response.data))
-
-
+# TEST FOR DELETING ENTRY
+     def test_delete_entry_by _id(self):
+        response = self.tester.delete(self.api_route_2)
+        self.assertEqual(response.status_code, 200)
 
 if __name__ == "__main__":
     unittest.main()
