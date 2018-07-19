@@ -53,7 +53,13 @@ def update_entry(entry_id):
     return jsonify({'entry': entry})
 
 
-
+@app.route('/mydiary/api/v1/entries/<int:entry_id>', methods=['DELETE'])
+def delete_entry(entry_id):
+    entry = [entry for entry in entries if entry['id'] == entry_id]
+    if len(entry) == 0:
+        abort(400)
+    entries.remove(entry[0])
+    return jsonify({'entry': True})
 
 @app.errorhandler(404)
 def not_found(error):
