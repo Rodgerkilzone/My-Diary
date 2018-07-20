@@ -1,11 +1,7 @@
 # My-Diary
 MyDiary is an online journal where users can pen down their thoughts and feelings.
 # Diary
-[![Build Status](https://travis-ci.org/charisschomba/Diary.svg?branch=develop)](https://travis-ci.org/Rodgerkilzone/My-Diary)
-[![Coverage Status](https://coveralls.io/repos/github/Rodgerkilzone/My-Diary/badge.svg?branch=develop)](https://coveralls.io/github/Rodgerkilzone/My-Diary?branch=develop)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4b7ac2f6873e46be8bfc34ec0efbfd7f)](https://www.codacy.com/app/Rodgerkilzone/My-Diary?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Rodgerkilzone/My-Diary&amp;utm_campaign=Badge_Grade)
-
+[![Build Status](https://travis-ci.org/Rodgerkilzone/My-Diary.svg?branch=master)](https://travis-ci.org/Rodgerkilzone/My-Diary)
 ## Endpoints
 
 | Functionality        |    Method     |         Endpoint                   |
@@ -50,6 +46,8 @@ python run.py
 ## Run the test:
 python test.py -unit
 
+## Heroku Link:
+https://floating-meadow-65335.herokuapp.com/mydiary/api/v1/entries
 
 
 <h2>Landing page</h2>
