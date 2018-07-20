@@ -1,7 +1,9 @@
 import unittest,json 
-
+from app import create_app
 class TestApp(unittest.TestCase):
      def Variables(self):
+         app = create_app('testing')
+         self.tester = app.test_client(self)
          self.api_route = '/mydiary/api/v1/entries'
          self.api_route_2 = '/mydiary/api/v1/entries/1'
          self.payload = {'title':'beach','content':'today i had fun at the beach'}
