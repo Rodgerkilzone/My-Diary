@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, abort, make_response, request, url_for
+import config
 app = Flask(__name__)
-
 entries = [
     {"id": 1,
      "title": 'football',
@@ -40,7 +40,19 @@ def get_entry(entry_id):
     if len(entry) == 0:
         abort(404)
     return jsonify({'entry': entry[0]})
-
+#POST ENTRIES    
+@app.route('/mydiary/api/v1/entries', methods=['POST'])
+def create_entry():
+    if not request.json or 'title' not in request.json:
+        abort(400)
+    entry = {
+        "id": entries[-1]['id'] + 1,
+        "title": request.json['title'],
+        "content": request.json.get('content', ''),
+        "date":request.json['date'],
+    }
+    entries.append(entry)
+    return jsonify({'entry': entry}), 201
 #UPDATE ENTRIES
 @app.route('/mydiary/api/v1/entries/<int:entry_id>', methods=['PUT'])
 def update_entry(entry_id):
@@ -52,7 +64,7 @@ def update_entry(entry_id):
     entry[0]['date'] = request.json.get('date', entry[0]['date'])
     return jsonify({'entry': entry})
 
-
+#DELETE ENTRIES
 @app.route('/mydiary/api/v1/entries/<int:entry_id>', methods=['DELETE'])
 def delete_entry(entry_id):
     entry = [entry for entry in entries if entry['id'] == entry_id]
@@ -66,5 +78,5 @@ def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
