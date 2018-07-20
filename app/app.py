@@ -49,7 +49,7 @@ def create_entry():
         "id": entries[-1]['id'] + 1,
         "title": request.json['title'],
         "content": request.json.get('content', ''),
-        "date":request.json['date'],
+        "date":request.json.get('date', '')
     }
     entries.append(entry)
     return jsonify({'entry': entry}), 201
