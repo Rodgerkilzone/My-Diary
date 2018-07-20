@@ -1,9 +1,6 @@
+# run.py
+
 import os
+from app import app
 
-from app import create_app
-
-config = os.getenv('APP_SETTINGS')
-app = create_app(config)
-
-if __name__ == "__main__":
-    app.run(debug=True, host='127.0.0.1', port=5000)
+app.run(host = os.getenv('IP', '127.0.0.1'), port = int(os.getenv('PORT', 5000)))
