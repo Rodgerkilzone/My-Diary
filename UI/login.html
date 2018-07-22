@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/login.css"/>
     <title>My Diary</title>
   </head>
   <body id="container">
-     <div class="navbar">
-       
-     <span class="title"> <a href="index.html">My Diary</a></span>
-  <a href="sign_up.html">Register</a>
-  <a href="login.html" class="selected">Login</a>
+<div class="topnav" id="myTopnav">
+  <a href="index.html" style="float: left" >My Diary</a>
+  <a href="login.html" class="login active">Login</a>
+  <a href="sign_up.html" >Register</a> 
+  <a href="javascript:void(0);"   class="icon" onclick="navbar()">
+
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
    <div class="card">
      <div class="logo">
@@ -43,6 +46,15 @@
 </div>
 
    </div>
-  
+  <script>
+function navbar() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
   </body>
 </html>

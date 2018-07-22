@@ -4,19 +4,22 @@
  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  
    <link rel="stylesheet" type="text/css" href="css/sign_up.css"/>
 
     <title>My Diary</title>
   </head>
   <body id="container">
-    <div class="navbar">
-       
-      <span class="title"> <a href="index.html">My Diary</a></span>
-  <a href="sign_up.html" class="selected">Register</a>
-  <a href="login.html">Login</a>
-</div> 
+ <div class="topnav" id="myTopnav">
+  <a href="index.html" style="float: left" >My Diary</a>
+  <a href="login.html" class="login">Login</a>
+  <a href="sign_up.html" class="active">Register</a> 
+  <a href="javascript:void(0);"   class="icon" onclick="navbar()">
+
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
    <div class="card">
   
      <div class="logo">
@@ -37,10 +40,22 @@
     <input type="password" id="password" name="password" placeholder="Your password">
     <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Your password">
   
-    <input type="submit" value="Sign up">
+     <a href="home.html">
+   <input type="button" value="Sign up" />
+</a>
     <div class="link"><a href="login.html">Login</a></div>
   </form>
 </div>
    </div>
+    <script>
+function navbar() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
   </body>
 </html>

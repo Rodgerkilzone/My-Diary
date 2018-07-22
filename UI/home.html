@@ -6,17 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" type="text/css" href="css/home.css"/>
     <link rel="stylesheet" href="css/style.css" >
-
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>My Diary</title>
   </head>
   <body id="container">
    
-    <div class="navbar">
+  <!--   <div class="navbar">
     
     <span class="title"> <a href="index.html">My Diary</a></span>
-  <a href="login.html">Logout</a>
-  <a href="profile.html">Profile</a>
-<a href="home.html" class="selected">Home</a>
+ 
+
+</div> -->
+<div class="topnav" id="myTopnav">
+  <a href="index.html" style="float: left" >My Diary</a>
+  <a href="login.html" class="logout" >Logout</a>
+  <a href="profile.html" >Profile</a>
+  <a href="home.html" class="selected">Home</a>
+  <a href="javascript:void(0);"   class="icon" onclick="navbar()">
+
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
 <div class="container">
   <div class="header">
@@ -50,29 +59,64 @@
  </button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-<div><button class="info">Edit</button><button class="delete">Delete</button></div>
+  <div id="edit_1" class="edit"> <div class="flex">
+         <div style="flex:3"><input type="text" value="Going out with friends" name="Title" placeholder="New Title"> </div>
+          <div style="flex:1"><button class="add">Save</button></div>
+              <br>
+
+     </div> 
+     <textarea type="text"  name="Title" placeholder="Edit Diary.."></textarea></div>
+<div><button class="info" id="edit_1" onclick="hideEdit(this.id)">Edit</button><button class="delete">Delete</button></div>
 
 </div>
 <button class="collapsible">Swimming at the beach <br><small class="date">-Date: 8/7/2018</small> </button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <div><button class="info">Edit</button><button class="delete">Delete</button></div>
+  <div id="edit_2" class="edit"> <div class="flex">
+         <div style="flex:3"><input type="text" value="Swimming at the beach" name="Title" placeholder="New Title"> </div>
+          <div style="flex:1"><button class="add">Save</button></div>
+              <br>
+
+     </div> 
+     <textarea type="text"  name="Title" placeholder="Edit Diary.."></textarea></div>
+<div><button class="info" id="edit_2" onclick="hideEdit(this.id)">Edit</button><button class="delete">Delete</button></div>
 </div>
 <button class="collapsible">Camping with classmates<br><small class="date">-Date: 7/7/2018</small> </button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <div><button class="info">Edit</button><button class="delete">Delete</button></div>
+  <div id="edit_3" class="edit"> <div class="flex">
+         <div style="flex:3"><input type="text" value="Camping with classmates" name="Title" placeholder="New Title"> </div>
+          <div style="flex:1"><button class="add">Save</button></div>
+              <br>
+
+     </div> 
+     <textarea type="text"  name="Title" placeholder="Edit Diary.."></textarea></div>
+<div><button class="info" id="edit_3" onclick="hideEdit(this.id)">Edit</button><button class="delete">Delete</button></div>
 </div>
 <button class="collapsible">At the airport<br><small class="date">-Date: 6/7/2018</small> </button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-<div><button class="info">Edit</button><button class="delete" class="date">Delete</button></div>
+  <div id="edit_4" class="edit"> <div class="flex">
+         <div style="flex:3"><input type="text" value="At the airport" name="Title" placeholder="New Title"> </div>
+          <div style="flex:1"><button class="add">Save</button></div>
+              <br>
+
+     </div> 
+     <textarea type="text"  name="Title" placeholder="Edit Diary.."></textarea></div>
+<div><button class="info" id="edit_4" onclick="hideEdit(this.id)">Edit</button><button class="delete">Delete</button></div>
 
 </div>
 <button class="collapsible">Eating competition<br><small class="date">-Date: 5/7/2018</small> </button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <div><button class="info">Edit</button><button class="delete">Delete</button></div>
+   <div id="edit_5" class="edit"> <div class="flex">
+         <div style="flex:3"><input type="text" value="Eating competition" name="Title" placeholder="New Title"> </div>
+          <div style="flex:1"><button class="add">Save</button></div>
+              <br>
+
+     </div> 
+     <textarea type="text"  name="Title" placeholder="Edit Diary.."></textarea></div>
+<div><button class="info" id="edit_5" onclick="hideEdit(this.id)">Edit</button><button class="delete">Delete</button></div>
 </div>
 
 <input type="submit" value="Load More">
@@ -101,6 +145,29 @@ function hideNew() {
         x.style.display = "block";
     }
 }
+function hideEdit(item) {
+    var x = document.getElementById(item);
+     var p = document.getElementById(item).parentElement;
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+        p.style.maxHeight = p.scrollHeight + "px";
+    }
+}
+function navbar() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+ window.onresize = OnResizeDocument;
+        function OnResizeDocument () {
+              var p = document.getElementsByClassName("edit");
+               p.style.maxHeight = p.scrollHeight + "px";
+        }
 var date = new Date();
 
 var day = date.getDate();

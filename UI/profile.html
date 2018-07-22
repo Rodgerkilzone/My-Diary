@@ -4,22 +4,25 @@
  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
- 
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" type="text/css" href="css/profile.css"/>
 
     <title>My Diary</title>
   </head>
   <body id="container">
     
-    <div class="navbar">
-    
-      <span class="title"> <a href="index.html">My Diary</a></span>
-    <a href="login.html">Logout</a>
+    <div class="topnav" id="myTopnav">
+  <a href="index.html" style="float: left" >My Diary</a>
+  <a href="login.html" class="logout" >Logout</a>
   <a href="profile.html" class="selected">Profile</a>
-<a href="home.html" >Home</a>
+  <a href="home.html" >Home</a>
+  <a href="javascript:void(0);"   class="icon" onclick="navbar()">
 
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
+
    <div class="card2">
 <div class="details">
   <div class="count1">
@@ -104,5 +107,15 @@
  <input type="submit" value="Set">
 </div>
    </div>
+   <script>
+function navbar() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+   </script>
   </body>
 </html>
