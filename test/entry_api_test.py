@@ -19,7 +19,7 @@ class TestApp(unittest.TestCase):
      def test_entry_post(self):
         self.tester = app.test_client(self)
         self.api_route= 'http://127.0.0.1:5000/mydiary/api/v1/entries'
-        self.payload = {'title':'beach','content':'today i had fun at the beach'}
+        self.payload = {'title':'beach','content':'today i had fun at the beach',"date": '12-8-2018'}
         response = self.tester.post(self.api_route,data=json.dumps(self.payload),
         content_type="application/json")
         self.assertEquals(response.status_code,201)
