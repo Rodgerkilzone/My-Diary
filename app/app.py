@@ -38,17 +38,17 @@ def get_entries():
 def get_entry(entry_id):
     entry = [entry for entry in entries if entry['id'] == entry_id]
     if len(entry) == 0:
-        abort(404)
+        return jsonify({"error":"No entry found"}),400
     return jsonify({'entry': entry[0]})
 #POST ENTRIES    
 @app.route('/mydiary/api/v1/entries', methods=['POST'])
 def create_entry():
     if not request.json or 'title' not in request.json:
-        return jsonify({"error":"please enter title"})
+        return jsonify({"error":"please enter title"}),400
     if not request.json or 'date' not in request.json:
-        return jsonify({"error":"please enter date"})
+        return jsonify({"error":"please enter date"}),400
     if not request.json or 'content' not in request.json:
-        return jsonify({"error":"please enter content"})
+        return jsonify({"error":"please enter content"}),400
     entry = {
         "id": entries[-1]['id'] + 1,
         "title": request.json['title'],
@@ -62,7 +62,7 @@ def create_entry():
 def update_entry(entry_id):
     entry = [entry for entry in entries if entry['id'] == entry_id]
     if len(entry) == 0 or not request.json:
-        abort(400)
+        return jsonify({"error":"No entry found"}),400
     entry[0]['title'] = request.json.get('title', entry[0]['title'])
     entry[0]['content'] = request.json.get('content', entry[0]['content'])
     entry[0]['date'] = request.json.get('date', entry[0]['date'])
@@ -73,9 +73,9 @@ def update_entry(entry_id):
 def delete_entry(entry_id):
     entry = [entry for entry in entries if entry['id'] == entry_id]
     if len(entry) == 0:
-        abort(400)
+         return jsonify({"error":"No entry found"}),400
     entries.remove(entry[0])
-    return jsonify({'entry': True})
+    return jsonify({'entry': "Entry has been Deleted"})
 
 @app.errorhandler(404)
 def not_found(error):
