@@ -44,7 +44,11 @@ def get_entry(entry_id):
 @app.route('/mydiary/api/v1/entries', methods=['POST'])
 def create_entry():
     if not request.json or 'title' not in request.json:
-        abort(400)
+        return jsonify({"error":"please enter title"})
+    if not request.json or 'date' not in request.json:
+        return jsonify({"error":"please enter date"})
+    if not request.json or 'content' not in request.json:
+        return jsonify({"error":"please enter content"})
     entry = {
         "id": entries[-1]['id'] + 1,
         "title": request.json['title'],

@@ -1,0 +1,9 @@
+{
+  "test/entry_api_test.py": true,
+  "test/entry_api_test.py::TestApp": true,
+  "test/entry_api_test.py::TestApp::test_delete_entry": true,
+  "test/entry_api_test.py::TestApp::test_entry_post": true,
+  "test/entry_api_test.py::TestApp::test_entry_update": true,
+  "test/entry_api_test.py::TestApp::test_get_all_entries": true,
+  "test/entry_api_test.py::TestApp::test_get_entry_by_id": true
+}
