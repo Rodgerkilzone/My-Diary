@@ -6,7 +6,7 @@ def unittests():
     test_suite = test_loader.discover('test/', pattern='*_test.py')
     return test_suite
 def main():
-	parser = argparse.ArgumentParser(description = "tests for checkpy")
+	parser = argparse.ArgumentParser(description = "tests for diary api")
 	parser.add_argument("-unit", action="store_true", help="run unittests")
 	args = parser.parse_args()
 
