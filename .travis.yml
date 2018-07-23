@@ -7,3 +7,4 @@ install:
 script:
   - python test.py -unit 
   - coverage run --include=app/* test.py -unit
+after_success: coveralls
