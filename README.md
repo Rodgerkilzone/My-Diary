@@ -2,7 +2,14 @@
 MyDiary is an online journal where users can pen down their thoughts and feelings.
 # Diary
 [![Build Status](https://travis-ci.org/Rodgerkilzone/My-Diary.svg?branch=master)](https://travis-ci.org/Rodgerkilzone/My-Diary)
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff4526e8237a4772addbc76d89edf6e2)](https://www.codacy.com/app/Rodgerkilzone/My-Diary?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Rodgerkilzone/My-Diary&amp;utm_campaign=Badge_Grade)
+
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/5ee9c6efadc98c01344b/maintainability)](https://codeclimate.com/github/Rodgerkilzone/My-Diary/maintainability)
+[![GitHub issues](https://img.shields.io/github/issues/Rodgerkilzone/My-Diary.svg)](https://github.com/Rodgerkilzone/My-Diary/issues)
+[![GitHub license](https://img.shields.io/github/license/Rodgerkilzone/My-Diary.svg)](https://github.com/Rodgerkilzone/My-Diary/blob/master/LICENSE)
+
 ## Endpoints
 
 | Functionality        |    Method     |         Endpoint                   |
