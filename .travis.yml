@@ -5,6 +5,7 @@ cache: pip
 install:
   - pip install -r requirements.txt
 script:
+  - python -m pytest test
   - python test.py -unit 
   - coverage run --include=app/* test.py -unit
 after_success: coveralls
