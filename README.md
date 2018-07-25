@@ -54,6 +54,10 @@ python run.py
 ## Run the test:
 python test.py -unit
 
+or
+
+python -m pytest test
+
 ## Heroku Link:
 https://floating-meadow-65335.herokuapp.com/mydiary/api/v1/entries
 
