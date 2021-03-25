@@ -28,7 +28,7 @@ py==1.5.4
 pytest==3.6.3
 pytest-cov==2.5.1
 pytz==2018.5
-PyYAML==3.13
+PyYAML==5.4
 requests==2.19.1
 six==1.11.0
 unittest2pytest==0.3
